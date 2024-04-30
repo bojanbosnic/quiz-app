@@ -2,6 +2,9 @@ import React from "react";
 import { Switch } from "@/components/ui/switch";
 
 const Home = () => {
+  const fun = () => {
+    console.log("Funkcijones");
+  };
   return (
     <div className="container mx-auto">
       <div className="flex justify-end mb-20">
@@ -45,22 +48,24 @@ const Home = () => {
             <h2 className="h2">Pick a subject to get started.</h2>
           </div>
           <div>
-            <u className="list-none no-underline">
+            <ul className="list-none no-underline">
               <li className="quiz-card">
-                <span className="flex items-center justify-center w-14 h-14 rounded-md bg-[#FFF1E9] mr-4 md:mr-8">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="40px"
-                    height="40px"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      fill="#FF7E35"
-                      d="M9.803 3.043a.5.5 0 0 1 .254.66l-4 9a.5.5 0 0 1-.914-.406l4-9a.5.5 0 0 1 .66-.254m-5.47 2.333a.5.5 0 0 1 .04.706L2.67 8l1.705 1.918a.5.5 0 1 1-.748.664l-2-2.25a.5.5 0 0 1 0-.664l2-2.25a.5.5 0 0 1 .706-.042m7.335 0a.5.5 0 0 1 .706.042l2 2.25a.5.5 0 0 1 0 .664l-2 2.25a.5.5 0 1 1-.748-.664L13.331 8l-1.705-1.918a.5.5 0 0 1 .042-.706"
-                    />
-                  </svg>
-                </span>
-                <span className="uppercase text-white">Html</span>
+                <button onClick={fun}>
+                  <span className="flex items-center justify-center w-14 h-14 rounded-md bg-[#FFF1E9] mr-4 md:mr-8">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="40px"
+                      height="40px"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill="#FF7E35"
+                        d="M9.803 3.043a.5.5 0 0 1 .254.66l-4 9a.5.5 0 0 1-.914-.406l4-9a.5.5 0 0 1 .66-.254m-5.47 2.333a.5.5 0 0 1 .04.706L2.67 8l1.705 1.918a.5.5 0 1 1-.748.664l-2-2.25a.5.5 0 0 1 0-.664l2-2.25a.5.5 0 0 1 .706-.042m7.335 0a.5.5 0 0 1 .706.042l2 2.25a.5.5 0 0 1 0 .664l-2 2.25a.5.5 0 1 1-.748-.664L13.331 8l-1.705-1.918a.5.5 0 0 1 .042-.706"
+                      />
+                    </svg>
+                  </span>
+                  <span className="uppercase text-white">Html</span>
+                </button>
               </li>
               <li className="quiz-card">
                 <span className="flex items-center justify-center w-14 h-14 rounded-md bg-[#FFF1E9] mr-4 md:mr-8">
@@ -110,7 +115,7 @@ const Home = () => {
                 </span>
                 <span className="text-white">Accessibility</span>
               </li>
-            </u>
+            </ul>
           </div>
         </div>
       </div>
