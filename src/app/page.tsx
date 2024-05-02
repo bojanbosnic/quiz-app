@@ -9,7 +9,11 @@ const Home = () => {
       <main>
         <HomePage />
       </main>
-      <footer></footer>
+      <footer>
+        <div className="text-center hidden">
+          2024 &copy; All rights resrved.
+        </div>
+      </footer>
     </div>
   );
 };
