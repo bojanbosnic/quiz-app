@@ -64,7 +64,9 @@ const Home = () => {
                       />
                     </svg>
                   </span>
-                  <span className="uppercase text-white">Html</span>
+                  <span className="text-xl uppercase text-white md:text-3xl">
+                    Html
+                  </span>
                 </button>
               </li>
               <li>
@@ -82,7 +84,9 @@ const Home = () => {
                       />
                     </svg>
                   </span>
-                  <span className="uppercase text-white">Css</span>
+                  <span className="text-xl uppercase text-white md:text-3xl">
+                    Css
+                  </span>
                 </button>
               </li>
               <li>
@@ -100,7 +104,9 @@ const Home = () => {
                       />
                     </svg>
                   </span>
-                  <span className="text-white">JavaScript</span>
+                  <span className="text-xl text-white md:text-3xl">
+                    JavaScript
+                  </span>
                 </button>
               </li>
               <li>
@@ -118,7 +124,9 @@ const Home = () => {
                       />
                     </svg>
                   </span>
-                  <span className="text-white">Accessibility</span>
+                  <span className="text-xl text-white md:text-3xl">
+                    Accessibility
+                  </span>
                 </button>
               </li>
             </ul>

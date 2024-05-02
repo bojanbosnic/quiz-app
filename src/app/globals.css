@@ -9,7 +9,7 @@
 }
 
 .h1 {
-  @apply text-3xl md:text-6xl font-light text-white mb-12;
+  @apply text-3xl font-light text-white mb-12 md:text-6xl;
 }
 .h2 {
   @apply text-xl italic text-secondary;
