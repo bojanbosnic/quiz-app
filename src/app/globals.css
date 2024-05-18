@@ -18,5 +18,9 @@
   @apply text-secondary;
 }
 .quiz-card {
-  @apply flex items-center min-w-[564px] p-5 bg-card mb-3 text-xl font-medium rounded-lg md:text-3xl md:mb-6;
+  @apply w-full flex items-center p-5 bg-card mb-3 text-xl font-medium rounded-lg  md:text-3xl md:mb-6;
+}
+
+.qustion-h2 {
+  @apply text-4xl font-medium text-white;
 }
