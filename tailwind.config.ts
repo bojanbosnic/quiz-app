@@ -22,6 +22,7 @@ const config = {
         secondary: "#ABC1E1",
         tertiary: "#313E51",
         card: "#3B4D66",
+        green: "#26D782",
         purple: "#A729F5",
         grey: "#626C7F",
       },

@@ -1,13 +1,19 @@
+"use client";
 import React from "react";
 import { Switch } from "@/components/ui/switch";
+import { setBackground } from "@/app/redux/quizSlice";
+import { useDispatch, useSelector } from "react-redux";
 type HeaderProps = {
   title: string;
 };
 const Header: React.FC<HeaderProps> = ({ title }) => {
+  const dispatch = useDispatch();
+  const switchColor = useSelector((state: RootState) => state.quiz.background);
+
   return (
     <>
       <div>
-        <h1 className="text-white">{title}</h1>
+        <h1 className={switchColor ? `text-white` : `text-card`}>{title}</h1>
       </div>
       <div className="flex items-center ">
         <span>
@@ -23,7 +29,7 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
             />
           </svg>
         </span>
-        <Switch />
+        <Switch onClick={() => dispatch(setBackground())} />
         <span>
           <svg
             xmlns="http://www.w3.org/2000/svg"

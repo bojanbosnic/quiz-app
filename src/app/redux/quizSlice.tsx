@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   correct: false,
-  page: true,
+  background: true,
 };
 export const quizSlice = createSlice({
   name: "quiz",
@@ -10,10 +10,10 @@ export const quizSlice = createSlice({
     setCorrectAnswer(state, action) {
       state.correct = action.payload;
     },
-    setPage(state) {
-      state.page = !state.page;
+    setBackground(state) {
+      state.background = !state.background;
     },
   },
 });
-export const { setCorrectAnswer, setPage } = quizSlice.actions;
+export const { setCorrectAnswer, setBackground } = quizSlice.actions;
 export default quizSlice.reducer;
