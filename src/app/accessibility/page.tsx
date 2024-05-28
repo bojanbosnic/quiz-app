@@ -3,26 +3,19 @@ import React, { useState } from "react";
 import { answers } from "../../../icons-elements";
 import Header from "@/components/Header";
 const Accessibility = () => {
-  const [question, setQuestion] = useState(null);
-  const [answer, setAnswer] = useState(false);
-  const catchAnswer = (index: number) => setQuestion(index);
-  const finishAnswer = () => {
-    console.log(question);
-
-    if (question == 0) {
-      console.log("Correct!");
-      setAnswer(true);
-    } else if (question == 1) {
-      console.log("Wrong!");
-      setAnswer(false);
-    } else if (question == 2) {
-      console.log("Wrong!");
-      setAnswer(false);
-    } else if (question == 3) {
-      console.log("Wrong!");
-      setAnswer(false);
-    }
+  const [questionNumber, setQuestionNumber] = useState(null);
+  const [submitted, setSubmitted] = useState(false);
+  const [warning, setWarning] = useState(false);
+  const catchAnswer = (index: number) => {
+    setQuestionNumber(index);
+    setSubmitted(false);
   };
+
+  const finishAnswer = () => {
+    setSubmitted(true);
+    setWarning(true);
+  };
+  console.log(questionNumber == 0);
   return (
     <div className="container mx-auto">
       <div className="flex justify-between items-center mb-20">
@@ -45,7 +38,13 @@ const Accessibility = () => {
               <li key={i}>
                 <button
                   onClick={() => catchAnswer(i)}
-                  className={`quiz-card focus:outline-none focus:ring focus:ring-purple group transition`}
+                  className={`quiz-card focus:outline-none focus:ring focus:ring-purple group transition ${
+                    submitted && questionNumber === i
+                      ? questionNumber === 0
+                        ? "outline outline-2 outline-blue-500"
+                        : "outline outline-2 outline-red-500"
+                      : ""
+                  }`}
                 >
                   <span className="flex items-center justify-center w-14 h-14 rounded-md bg-[#FFF1E9] mr-4 md:mr-8 group-focus:bg-purple transition-colors duration-300">
                     <span className="text-grey group-focus:text-white transition-colors duration-300">
@@ -62,7 +61,7 @@ const Accessibility = () => {
               onClick={finishAnswer}
               className="w-full text-white font-medium rounded-lg flex justify-center items-center texts-xs bg-purple p-3 md:p-8 md:text-3xl"
             >
-              Submit Answer
+              {submitted ? "Next Question" : "Submit Answer"}
             </button>
           </ul>
         </div>
